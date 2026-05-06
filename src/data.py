@@ -70,9 +70,15 @@ def tokenize(sentence, vocab):
 
         tokens.append(vocab[word])
 
-    tokens.append(vocab["<eos>"])
+    if word in vocab:
 
-    return tokens
+    tokens.append(vocab[word])
+    
+    else:
+    
+    print(f"Unknown word: {word}")
+
+    return []
 
 
 # ==================================================
